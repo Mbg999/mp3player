@@ -1,0 +1,279 @@
+/*
+    Author: Miguel Belmonte
+    creation date: 27/12/2019
+    last update date: 28/12/2019
+*/
+
+/* FONTS */
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+/* /FONTS */
+
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+/* /RESETS */
+
+/*
+    PALETA DE COLORES 
+    rojo claro #f67280
+    rojo oscuro #c06c84
+    rojo gris #6c5b7b
+    gris #355c7d
+    whitesmoke
+    black
+*/
+
+/* MAIN-CONTAINER */
+#main-container {
+    min-height: 100%;
+    width: 100%;
+    background-color: #355c7d;
+    margin: auto;
+    position: relative;
+}
+/* /MAIN-CONTAINER */
+
+#main-container > header, footer, #btnPicker,#seekbar-container h3 {
+    background-color: #6c5b7b;
+    color: #c06c84;
+    padding: 15px;
+}
+
+/* NAV, player buttons */
+nav {
+    text-align: center;
+    overflow-y: auto;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+nav > button {
+    min-height: 53px;
+    float: left;
+    width: 16.66%;
+    padding: 10px;
+    background-color: #f67280;
+    color: #6c5b7b;
+    border: none;
+    font-size: 1.8em;
+    position: relative;
+    cursor: pointer;
+}
+
+nav > button:not(:first-of-type) {
+    border-left: 1px solid #6c5b7b;
+}
+
+#seekbar-container h3 {
+    padding: 0;
+}
+
+/* /NAV, player buttons */
+
+/* MAIN */
+main {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    min-height: 400px;
+}
+
+main > section {
+    /* display: flex; */
+    /* justify-content: center; */
+    color: whitesmoke;
+    overflow-y: auto;
+}
+
+article {
+    float: left;
+}
+
+/* SONG VIEW */
+#songView {
+    width: 55%;
+    color: black;
+    text-align: center;
+}
+
+#songView > div {
+    background-color: whitesmoke;
+    padding: 5em;
+}
+
+/* SONG VIEW HEADER */
+#songView header {
+    margin-bottom: 15px;
+}
+
+#songView h3 {
+    font-size: 3em;
+}
+
+#album_name {
+    font-size: 1.8em;
+}
+/* /SONG VIEW HEADER */
+/* SONG VIEW LYRICS */
+#song_lyrics {
+    font-size: 1.3em;
+}
+/* /SONG VIEW LYRICS */
+/* /SONG VIEW */
+
+/* SONGS */
+#songs {
+    width: 45%;
+}
+
+/* SONG PICKER */
+#songPicker {
+    display: none;
+}
+
+#btnPicker {
+    width: 100%;
+    border: none;
+    float: left;
+    font-size: 1.7em;
+    min-height: 42px;
+}
+
+#btnPicker:hover {
+    cursor: pointer;
+}
+/* /SONG PICKER */
+
+/* SONG LIST */
+#songList {
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 10px 0 10px 0;
+    font-size: 1.3em;
+}
+
+#songList li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #f67280;
+}
+
+#songList li span {
+    display: inline-block;
+}
+
+.selected {
+    background-color: #f67280;
+    color: #6c5b7b;
+}
+
+.selected span {
+    padding: 10px 0 10px 0;
+}
+/* SONG LIST */
+/* SONGS */
+/* /MAIN */
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#songs button:active, nav > button:active {
+    font-size: 1.6em;
+}
+/* /FOOTER */
+
+/* RESPONSIVE */
+@media only screen and (max-width: 656px){
+    #songView, #songs {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 657px){
+    #songView {
+        width: 55%;
+    }
+
+    #songs {
+        width: 45%;
+    }
+}
+/* /RESPONSIVE */
+
+/* RANGE SLIDER */
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    float: left;
+}
+
+/* The slider itself */
+.slider {
+    float: left;
+    overflow: hidden;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; 
+    height: 10px; 
+    background-color: #355c7d;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/*Chrome*/
+.slider::-webkit-slider-thumb { /* SELECTOR DESLIZANTE */
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px;
+    height: 10px;
+    background-color: #c06c84;
+    cursor: pointer;
+    box-shadow: -10000px 0 0 10000px whitesmoke; /* BARRA RELLENADA */
+}
+
+/* FireFox */
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #c06c84;
+    cursor: pointer;
+}
+
+.slider::-moz-range-progress {
+  background-color: whitesmoke;
+  height: 30px;
+}
+
+/* IE*/
+.slider::-ms-fill-lower {
+    background-color: whitesmoke; 
+}
+
+.slider::-ms-fill-upper {  
+  background-color: transparent;
+}
+/* /RANGE SLIDER */
