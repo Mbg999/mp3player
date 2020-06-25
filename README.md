@@ -10,7 +10,7 @@ You can try it here: https://mbg999.github.io/mp3player/
 ![image desktop](https://i.imgur.com/DJrNS0G.png)
 
 <p align="center">
-  <img src="https://i.imgur.com/dk1MhaF.jpg" width="350" alt="image android 1">
-  <img src="https://i.imgur.com/yGInRVX.jpg" width="350" alt="image android 2">
-  <img src="https://i.imgur.com/JqbmBvj.jpg" width="350" alt="image android 3">
+  <img src="https://i.imgur.com/dk1MhaF.jpg" width="200" alt="image android 1">
+  <img src="https://i.imgur.com/yGInRVX.jpg" width="200" alt="image android 2">
+  <img src="https://i.imgur.com/JqbmBvj.jpg" width="200" alt="image android 3">
 </p>
